@@ -39,12 +39,8 @@ $msg = "";
 
 ?>
 <?php
-
 if ($le == 1) {
-
-	$tabs = '  
-				 
-				  
+	$tabs = '  	  
 	<li><a href="index.php?tab=admin_approve_lec"><i class="fa fa-desktop" ></i>Approve Lecture Coverages<span class=""></span></a></li>		  
 		
  <li><a><i class="fa fa-edit"></i>Configurations <span class="fa fa-chevron-down"></span></a>
@@ -57,15 +53,7 @@ if ($le == 1) {
 	            
 	  <li><a href="index.php?tab=manage_admin">Manage Users</a></li>
 	</ul>
-  </li> 
-				 
-                  
-		
-								
-									
-									
-				  
-				  ';
+  </li> P';
 } else if ($le == 2) {
 	//$tabs ="";	
 	$tabs = '	
