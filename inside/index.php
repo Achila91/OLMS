@@ -40,9 +40,8 @@ $msg = "";
 ?>
 <?php
 if ($le == 1) {
-	$tabs = '  	  
-	<li><a href="index.php?tab=admin_approve_lec"><i class="fa fa-desktop" ></i>Approve Lecture Coverages<span class=""></span></a></li>		  
-		
+	$tabs = '<li><a href="index.php?tab=admin_approve_lec"><i class="fa fa-desktop" ></i>Approve Lecture Coverages<span class=""></span></a></li>		  
+
  <li><a><i class="fa fa-edit"></i>Configurations <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
 	<li><a href="index.php?tab=all_course">Manage Courses</a></li>
@@ -373,6 +372,7 @@ if ($le == 1) {
 
 								//report gen and payment part include by tab
 								//href index.php?tab=report_gen_view_sel_time_period_bcbb_day
+								
 								else if ($t == 'report_gen_home') {
 									include "report_gen/report_gen_home.php";
 								} else if ($t == 'report_gen_monthly') {
@@ -433,6 +433,7 @@ if ($le == 1) {
 								} else if ($t == 'report_gen_monthy_bm') {
 									include "report_gen/report_gen_monthly_branch_mng.php";
 								}
+
 								//report_gen_home_export
 								//payment part
 								//href index.php?tab=installment_first
