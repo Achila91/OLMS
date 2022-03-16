@@ -60,7 +60,9 @@ if ($le == 1) {
 	<li><a><i class="fa fa-desktop"></i>Lecture Coverages <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
 				  <li><a href="index.php?tab=assign_batch">Assign Batches<span class=""></span></a></li>
+
 				  <li><a href="index.php?tab=approve_lecs">Approve Lectures<span class=""></span></a></li>
+
 				  <li><a href="index.php?tab=approved_lecs">Approved Lectures<span class=""></span></a></li>
 				  </ul>
 				  </li> 	  
@@ -108,6 +110,7 @@ if ($le == 1) {
 	$tabs = '	 				  
 
 				  <li><a href="index.php?tab=f_approve"><i class="fa fa-edit"></i>Add Lecture Payments<span class=""></span></a></li>
+				  
 				  <li><a href="index.php?tab=ac_decline"><i class="fa fa-edit"></i>Approved Lectures<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_payment"><i class="fa fa-edit"></i>Finalized Payments<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_report"><i class="fa fa-edit"></i>Payment Reports<span class=""></span></a></li>
