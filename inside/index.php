@@ -39,14 +39,9 @@ $msg = "";
 
 ?>
 <?php
-
 if ($le == 1) {
+	$tabs = '<li><a href="index.php?tab=admin_approve_lec"><i class="fa fa-desktop" ></i>Approve Lecture Coverages<span class=""></span></a></li>		  
 
-	$tabs = '  
-				 
-				  
-	<li><a href="index.php?tab=admin_approve_lec"><i class="fa fa-desktop" ></i>Approve Lecture Coverages<span class=""></span></a></li>		  
-		
  <li><a><i class="fa fa-edit"></i>Configurations <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
 	<li><a href="index.php?tab=all_course">Manage Courses</a></li>
@@ -57,15 +52,7 @@ if ($le == 1) {
 	            
 	  <li><a href="index.php?tab=manage_admin">Manage Users</a></li>
 	</ul>
-  </li> 
-				 
-                  
-		
-								
-									
-									
-				  
-				  ';
+  </li> P';
 } else if ($le == 2) {
 	//$tabs ="";	
 	$tabs = '	
@@ -73,7 +60,9 @@ if ($le == 1) {
 	<li><a><i class="fa fa-desktop"></i>Lecture Coverages <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
 				  <li><a href="index.php?tab=assign_batch">Assign Batches<span class=""></span></a></li>
+
 				  <li><a href="index.php?tab=approve_lecs">Approve Lectures<span class=""></span></a></li>
+
 				  <li><a href="index.php?tab=approved_lecs">Approved Lectures<span class=""></span></a></li>
 				  </ul>
 				  </li> 	  
@@ -100,6 +89,7 @@ if ($le == 1) {
 					  
 				  <li><a><i class="fa fa-edit"></i>Payment Approval <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
+	
 	<li><a href="index.php?tab=finalize">Approve Payments<span class=""></span></a></li>
 	<li><a href="index.php?tab=rollback_f"></i>Rollback Approved Payments<span class=""></span></a></li>
 	
@@ -121,6 +111,7 @@ if ($le == 1) {
 	$tabs = '	 				  
 
 				  <li><a href="index.php?tab=f_approve"><i class="fa fa-edit"></i>Add Lecture Payments<span class=""></span></a></li>
+				  
 				  <li><a href="index.php?tab=ac_decline"><i class="fa fa-edit"></i>Approved Lectures<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_payment"><i class="fa fa-edit"></i>Finalized Payments<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_report"><i class="fa fa-edit"></i>Payment Reports<span class=""></span></a></li>
@@ -385,6 +376,7 @@ if ($le == 1) {
 
 								//report gen and payment part include by tab
 								//href index.php?tab=report_gen_view_sel_time_period_bcbb_day
+								
 								else if ($t == 'report_gen_home') {
 									include "report_gen/report_gen_home.php";
 								} else if ($t == 'report_gen_monthly') {
@@ -445,6 +437,7 @@ if ($le == 1) {
 								} else if ($t == 'report_gen_monthy_bm') {
 									include "report_gen/report_gen_monthly_branch_mng.php";
 								}
+
 								//report_gen_home_export
 								//payment part
 								//href index.php?tab=installment_first
@@ -509,10 +502,14 @@ if ($le == 1) {
 									} else {
 										include "pay/set_approval_state.php";
 									}
-								} else if ($t == 'rejecteddiscount') {
+								} 
+
+								else if ($t == 'rejecteddiscount') {
 									if (isset($_GET['nic']) && ($_GET['course_id']) && ($_GET['std_id'])) {
+										
 										include "pay/set_approve_state_reject.php";
 									} else {
+
 										include "pay/set_approval_state.php";
 									}
 								} else if ($t == 'alterdiscount') {
