@@ -506,9 +506,10 @@ if ($le == 1) {
 
 								else if ($t == 'rejecteddiscount') {
 									if (isset($_GET['nic']) && ($_GET['course_id']) && ($_GET['std_id'])) {
+										
 										include "pay/set_approve_state_reject.php";
 									} else {
-										
+
 										include "pay/set_approval_state.php";
 									}
 								} else if ($t == 'alterdiscount') {
