@@ -115,10 +115,6 @@ if ($le == 1) {
 				  <li><a href="index.php?tab=ac_decline"><i class="fa fa-edit"></i>Approved Lectures<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_payment"><i class="fa fa-edit"></i>Finalized Payments<span class=""></span></a></li>
 				  <li><a href="index.php?tab=f_report"><i class="fa fa-edit"></i>Payment Reports<span class=""></span></a></li>
-					  
-				 
-				
-				  
 				  
 				  ';
 }
@@ -423,9 +419,11 @@ if ($le == 1) {
 								} else if ($t == 'report_gen_view_sel_time_period_bcbb_day') {
 									include "report_gen/report_gen_view_sel_time_period_bcbb_day.php";
 								} else if ($t == 'report_gen_home_export') {
+
 									include "report_gen/report_gen_home_export.php";
 								} else if ($t == 'completesummary') {
 									if (isset($_GET['selmonth'])) {
+										
 										include "report_gen/report_gen_complete_summary.php";
 									} else {
 										include "report_gen/report_gen_view_sel_month.php";
@@ -460,6 +458,7 @@ if ($le == 1) {
 									}
 								} else if ($t == 'installment_payment') {
 									if (isset($_GET['nic']) && ($_GET['course_id'])) {
+
 										include "pay/installment_payment.php";
 									} else {
 										include "pay/pay1.php";
@@ -506,7 +505,7 @@ if ($le == 1) {
 
 								else if ($t == 'rejecteddiscount') {
 									if (isset($_GET['nic']) && ($_GET['course_id']) && ($_GET['std_id'])) {
-										
+
 										include "pay/set_approve_state_reject.php";
 									} else {
 
@@ -525,6 +524,7 @@ if ($le == 1) {
 								} else if ($t == 'payment_refund') {
 									include "pay/payment_refund_main.php";
 								} else if ($t == 'payment_refund_in') {
+
 									if (isset($_GET['course_id']) && ($_GET['std_id'])) {
 										include "pay/payment_refund_in.php";
 									} else {
