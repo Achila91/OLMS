@@ -89,6 +89,7 @@ if ($le == 1) {
 					  
 				  <li><a><i class="fa fa-edit"></i>Payment Approval <span class="fa fa-chevron-down"></span></a>
 	<ul class="nav child_menu">
+	
 	<li><a href="index.php?tab=finalize">Approve Payments<span class=""></span></a></li>
 	<li><a href="index.php?tab=rollback_f"></i>Rollback Approved Payments<span class=""></span></a></li>
 	
@@ -501,10 +502,13 @@ if ($le == 1) {
 									} else {
 										include "pay/set_approval_state.php";
 									}
-								} else if ($t == 'rejecteddiscount') {
+								} 
+
+								else if ($t == 'rejecteddiscount') {
 									if (isset($_GET['nic']) && ($_GET['course_id']) && ($_GET['std_id'])) {
 										include "pay/set_approve_state_reject.php";
 									} else {
+										
 										include "pay/set_approval_state.php";
 									}
 								} else if ($t == 'alterdiscount') {
