@@ -419,9 +419,11 @@ if ($le == 1) {
 								} else if ($t == 'report_gen_view_sel_time_period_bcbb_day') {
 									include "report_gen/report_gen_view_sel_time_period_bcbb_day.php";
 								} else if ($t == 'report_gen_home_export') {
+
 									include "report_gen/report_gen_home_export.php";
 								} else if ($t == 'completesummary') {
 									if (isset($_GET['selmonth'])) {
+										
 										include "report_gen/report_gen_complete_summary.php";
 									} else {
 										include "report_gen/report_gen_view_sel_month.php";
@@ -522,7 +524,7 @@ if ($le == 1) {
 								} else if ($t == 'payment_refund') {
 									include "pay/payment_refund_main.php";
 								} else if ($t == 'payment_refund_in') {
-									
+
 									if (isset($_GET['course_id']) && ($_GET['std_id'])) {
 										include "pay/payment_refund_in.php";
 									} else {
